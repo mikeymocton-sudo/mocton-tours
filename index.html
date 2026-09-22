@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shoresh Israel — Family trips, Yom Tov and simchas, handled on the ground</title>
+<meta name="description" content="Apartments, drivers, meals, guides and childcare for families visiting Israel. Arranged before you land, looked after while you're here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BRAND NAME: search this file for "Shoresh" to rename.
+   PHONE / EMAIL / WHATSAPP: search for "0584278128".
+   ============================================================ */
+:root{
+  --ink:#1B2333;
+  --ink-soft:#414B5F;
+  --limestone:#E9E4D9;
+  --paper:#FBFAF6;
+  --olive:#4A5D4E;
+  --brass:#B0813A;
+  --brass-lift:#C79747;
+  --line:rgba(27,35,51,.14);
+  --shadow:0 1px 2px rgba(27,35,51,.05),0 12px 34px -14px rgba(27,35,51,.22);
+  --wrap:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Karla",system-ui,sans-serif;font-weight:400;font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:"Newsreader",Georgia,serif;font-weight:400;line-height:1.14;letter-spacing:-.012em;margin:0}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:18px;
+}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;background:rgba(251,250,246,.9);
+  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:70px}
+.mark{font-family:"Newsreader",serif;font-size:24px;letter-spacing:-.01em;text-decoration:none}
+.mark span{color:var(--brass)}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-size:15px;text-decoration:none;color:var(--ink-soft)}
+.nav a:hover{color:var(--ink)}
+@media(max-width:860px){.nav .hide-sm{display:none}}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:"Karla",sans-serif;font-size:15px;font-weight:600;
+  padding:12px 22px;border-radius:999px;text-decoration:none;border:1px solid transparent;
+  transition:transform .15s ease,background .2s ease,color .2s ease;cursor:pointer;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:#111827}
+.btn-brass{background:var(--brass);color:#fff}
+.btn-brass:hover{background:var(--brass-lift)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--ink)}
+:focus-visible{outline:2.5px solid var(--brass);outline-offset:3px;border-radius:4px}
+
+/* ---------- video hero ---------- */
+.hero{
+  position:relative;height:clamp(520px,84vh,760px);overflow:hidden;background:#0F1520;
+}
+.hero video,.hero .poster{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+.hero .poster{display:none}
+.scrim{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to bottom,rgba(15,21,32,.55) 0%,rgba(15,21,32,0) 26%),
+    linear-gradient(to top,rgba(15,21,32,.86) 0%,rgba(15,21,32,.28) 42%,rgba(15,21,32,0) 68%);
+}
+.hero-inner{
+  position:absolute;left:0;right:0;bottom:0;padding-bottom:46px;
+}
+.hero-inner .eyebrow{color:#E0C079;margin-bottom:14px}
+.hero-inner h1{
+  color:#fff;font-size:clamp(2.1rem,4.4vw,3.4rem);max-width:15em;
+  text-shadow:0 2px 24px rgba(0,0,0,.4);
+}
+.hero-inner h1 em{font-style:italic;color:#E9DCC0}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn-light{background:rgba(255,255,255,.94);color:var(--ink)}
+.btn-light:hover{background:#fff}
+.btn-outline-light{border-color:rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.06)}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.14)}
+@media(max-width:700px){
+  .hero{height:clamp(460px,76vh,620px)}
+  .hero-inner{padding-bottom:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero video{display:none}
+  .hero .poster{display:block}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- intro strip ---------- */
+.intro{padding:74px 0 10px}
+.intro p{font-size:clamp(1.25rem,2.3vw,1.55rem);font-family:"Newsreader",serif;font-weight:300;max-width:24em;line-height:1.42}
+
+/* ---------- the list ---------- */
+.list-section{padding:66px 0 88px}
+.list-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:900px){.list-grid{grid-template-columns:1fr;gap:36px}}
+.list-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  box-shadow:var(--shadow);padding:30px 30px 26px;position:relative;
+}
+.list-card::before{
+  content:"";position:absolute;inset:14px 14px auto auto;width:56px;height:6px;
+  background:var(--limestone);border-radius:3px;
+}
+.list-title{font-family:"Newsreader",serif;font-size:20px;margin-bottom:4px}
+.list-sub{font-size:13.5px;color:var(--ink-soft);margin-bottom:20px}
+.list{list-style:none;margin:0;padding:0}
+.list li{
+  display:flex;align-items:flex-start;gap:13px;padding:11px 0;
+  border-bottom:1px dashed var(--line);font-size:16px;
+}
+.list li:last-child{border-bottom:0}
+.check{
+  flex:none;width:21px;height:21px;border-radius:6px;background:var(--olive);
+  display:grid;place-items:center;margin-top:1px;
+}
+.check svg{width:12px;height:12px;stroke:#fff;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.list li span:last-child{color:var(--ink-soft)}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.band{background:var(--limestone)}
+.sec-head{max-width:46em;margin-bottom:48px}
+.sec-head h2{font-size:clamp(2rem,3.5vw,2.7rem)}
+.sec-head p{margin-top:16px;color:var(--ink-soft);font-size:18px}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:940px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.grid-3{grid-template-columns:1fr}}
+
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 26px 26px;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.band .card{background:var(--paper)}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{font-size:15.5px;color:var(--ink-soft)}
+.card .rule{width:32px;height:2px;background:var(--brass);margin-bottom:18px}
+
+/* how it works — a real sequence, so it's numbered */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;counter-reset:s}
+@media(max-width:820px){.steps{grid-template-columns:1fr;gap:26px}}
+.step{padding-top:26px;border-top:2px solid var(--ink)}
+.step .n{
+  font-family:"Newsreader",serif;font-size:14px;letter-spacing:.14em;
+  color:var(--brass);display:block;margin-bottom:12px;
+}
+.step h3{font-size:22px;margin-bottom:10px}
+.step p{font-size:15.5px;color:var(--ink-soft)}
+
+/* occasions */
+.occ{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+@media(max-width:820px){.occ{grid-template-columns:1fr}}
+.occ > div{padding:34px 30px;border-right:1px solid var(--line)}
+.occ > div:last-child{border-right:0}
+@media(max-width:820px){
+  .occ > div{border-right:0;border-bottom:1px solid var(--line)}
+  .occ > div:last-child{border-bottom:0}
+}
+.occ h3{font-size:22px;margin-bottom:10px}
+.occ p{font-size:15.5px;color:var(--ink-soft)}
+
+/* why */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+@media(max-width:900px){.why{grid-template-columns:1fr;gap:36px}}
+.why h2{font-size:clamp(2rem,3.4vw,2.6rem)}
+.why-list{list-style:none;margin:0;padding:0}
+.why-list li{padding:20px 0;border-bottom:1px solid var(--line)}
+.why-list li:last-child{border-bottom:0}
+.why-list strong{display:block;font-family:"Newsreader",serif;font-weight:500;font-size:19px;margin-bottom:5px}
+.why-list p{font-size:15.5px;color:var(--ink-soft)}
+
+/* form */
+.form-wrap{
+  background:var(--ink);color:var(--paper);border-radius:22px;padding:56px 52px;
+  display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;
+}
+@media(max-width:900px){.form-wrap{grid-template-columns:1fr;gap:36px;padding:38px 26px}}
+.form-wrap h2{font-size:clamp(1.9rem,3.2vw,2.5rem);color:#fff}
+.form-wrap .sub{margin-top:16px;color:rgba(251,250,246,.72);font-size:17px}
+.direct{margin-top:28px;font-size:15.5px}
+.direct a{color:var(--brass-lift);text-decoration:none;font-weight:600}
+.direct a:hover{text-decoration:underline}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:620px){.fields{grid-template-columns:1fr}}
+.field-full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(251,250,246,.65);margin-bottom:7px}
+input,select,textarea{
+  width:100%;font-family:"Karla",sans-serif;font-size:16px;color:var(--paper);
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.17);
+  border-radius:10px;padding:12px 14px;
+}
+input::placeholder,textarea::placeholder{color:rgba(251,250,246,.38)}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,rgba(251,250,246,.5) 50%),linear-gradient(135deg,rgba(251,250,246,.5) 50%,transparent 50%);background-position:calc(100% - 19px) 21px,calc(100% - 14px) 21px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+select option{color:#1B2333}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brass-lift);outline-offset:1px;border-color:transparent}
+.form-actions{margin-top:22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.privacy{font-size:13.5px;color:rgba(251,250,246,.55)}
+
+/* footer */
+footer{padding:56px 0 44px;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start}
+.foot p,.foot a{font-size:15px;color:var(--ink-soft);text-decoration:none}
+.foot a:hover{color:var(--ink)}
+.foot-links{display:flex;gap:26px;flex-wrap:wrap}
+.copyright{margin-top:34px;font-size:13.5px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top">Shoresh<span>.</span></a>
+    <nav class="nav">
+      <a class="hide-sm" href="#services">What we handle</a>
+      <a class="hide-sm" href="#how">How it works</a>
+      <a class="hide-sm" href="#occasions">Occasions</a>
+      <a class="btn btn-solid" href="#enquire">Start planning</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO: full-bleed film -->
+  <section class="hero">
+    <video autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg" aria-hidden="true">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <img class="poster" src="hero-poster.jpg" alt="">
+    <div class="scrim"></div>
+    <div class="hero-inner">
+      <div class="wrap">
+        <p class="eyebrow">Based in Israel · Serving families from the UK &amp; US</p>
+        <h1>We're the ones <em>here</em> to handle it.</h1>
+        <div class="hero-cta">
+          <a class="btn btn-light" href="#enquire">Tell us about your trip</a>
+          <a class="btn btn-outline-light" href="https://wa.me/9720584278128" target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="wrap">
+      <p>Apartments, drivers, Shabbos meals, guides, babysitters, the lot. Sorted before you land, and looked after by someone twenty minutes away while you're here.</p>
+    </div>
+  </section>
+
+  <!-- THE LIST -->
+  <section class="list-section">
+    <div class="wrap list-grid">
+      <div>
+        <p class="eyebrow">The way it usually goes</p>
+        <h2 style="font-size:clamp(1.9rem,3.3vw,2.5rem)">Everything you were worrying about, in one thread</h2>
+        <p style="margin-top:18px;color:var(--ink-soft);font-size:17.5px;max-width:28em">You send the list. We come back with real options and real prices, and then it stops being your problem.</p>
+        <p style="margin-top:24px"><a class="btn btn-solid" href="#enquire">Send us your list</a></p>
+      </div>
+
+      <div class="list-card" aria-label="Example trip checklist">
+        <p class="list-title">A typical Sukkos trip · two weeks</p>
+        <p class="list-sub">The sort of list that lands in our inbox</p>
+        <ul class="list">
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span>Four-bedroom in Rechavia, sukkah on the balcony</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span>Two cars at Ben Gurion, 6am landing</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span>Yom Tov meals delivered, one nut allergy</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span>Guide for the Kotel tunnels, good with teenagers</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span>Babysitter Tuesday and Thursday nights</span></li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span>Someone to call when the aircon packs up</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we handle</p>
+        <h2>One number for the whole trip</h2>
+        <p>Take as much or as little as you need. Most families start with somewhere to stay and end up handing us the rest.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="rule"></div><h3>Apartments &amp; villas</h3><p>Places we've stood inside ourselves, in Jerusalem, Beit Shemesh, Tel Aviv and the north. Sukkah balconies, lifts, ground floors, big kitchens — tell us what actually matters to you.</p></div>
+        <div class="card"><div class="rule"></div><h3>Drivers &amp; transport</h3><p>Airport runs at any hour, day trips, minibuses for the whole family. Drivers we use ourselves and would put our own parents with.</p></div>
+        <div class="card"><div class="rule"></div><h3>Food &amp; catering</h3><p>Shabbos and Yom Tov meals delivered, private chefs, restaurant bookings. Allergies, fussy eaters and specific hechsherim all handled without a fuss.</p></div>
+        <div class="card"><div class="rule"></div><h3>Itineraries &amp; guides</h3><p>Days built around your family rather than a coach timetable — the ages you're travelling with, how far people will really walk, and what everyone will still be talking about in a year.</p></div>
+        <div class="card"><div class="rule"></div><h3>Childcare &amp; help at home</h3><p>English-speaking babysitters, cleaners between guests, someone to do a shop before you arrive so the fridge isn't empty at midnight.</p></div>
+        <div class="card"><div class="rule"></div><h3>Simchas &amp; events</h3><p>Bar mitzvahs, upsherin, sheva brachos, family reunions. Venue, catering, music, photographer, the seating plan nobody wants to do.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three conversations, then you can stop thinking about it</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="n">FIRST</span>
+          <h3>Tell us the shape of it</h3>
+          <p>Who's coming, when, roughly what you want to spend, and the things that would ruin it if they went wrong. Twenty minutes on the phone or WhatsApp, whichever you prefer.</p>
+        </div>
+        <div class="step">
+          <span class="n">THEN</span>
+          <h3>We come back with options</h3>
+          <p>Real ones, with real prices — not a brochure. You say yes to what you like and we quietly drop the rest. Change your mind as many times as you need.</p>
+        </div>
+        <div class="step">
+          <span class="n">WHILE YOU'RE HERE</span>
+          <h3>We're on the end of the phone</h3>
+          <p>Flight delayed, boiler broken, child unwell, plans changed at eleven at night. We're in the country, not in an office six hours behind you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OCCASIONS -->
+  <section id="occasions" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Occasions</p>
+        <h2>When families usually call us</h2>
+      </div>
+      <div class="occ">
+        <div>
+          <h3>Yom Tov</h3>
+          <p>Pesach, Sukkos, Tishrei with the whole mishpacha. The apartments go early and the good ones go earliest — the families who get what they want start talking to us months ahead.</p>
+        </div>
+        <div>
+          <h3>A simcha in Israel</h3>
+          <p>Bar mitzvah at the Kotel, an upsherin in Meron, sheva brachos for forty people. You're flying in guests from three countries; we'll handle everything on this end.</p>
+        </div>
+        <div>
+          <h3>The family trip</h3>
+          <p>Two weeks, three generations, and wildly different ideas of a good day out. This is the one people find hardest to plan alone, and the one we most enjoy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section>
+    <div class="wrap why">
+      <div>
+        <p class="eyebrow">Why us</p>
+        <h2>The difference is who picks up at eleven at night</h2>
+        <p style="margin-top:18px;color:var(--ink-soft);font-size:18px">Plenty of people will plan you an itinerary from an office abroad. Fewer will drive over when the key doesn't work.</p>
+      </div>
+      <ul class="why-list">
+        <li><strong>We live here</strong><p>Not a call centre in another time zone. When something goes wrong mid-trip — and on a two-week trip something usually does — there's a person nearby who can actually fix it.</p></li>
+        <li><strong>We're Anglos too</strong><p>Raised in the UK, living in Israel. We know what you're expecting, what will surprise you, and how to explain the bits of this country that make no sense the first time.</p></li>
+        <li><strong>Everyone on our list is someone we'd use</strong><p>No lucky-dip suppliers. If a driver lets a family down, he comes off the list. That's the whole business.</p></li>
+        <li><strong>You get one person, not a department</strong><p>The same name on every message, from the first phone call to the ride back to the airport.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ENQUIRY -->
+  <section id="enquire">
+    <div class="wrap">
+      <div class="form-wrap">
+        <div>
+          <h2>Tell us about your trip</h2>
+          <p class="sub">Send us the rough outline and we'll come back within a day, usually sooner. Nothing is committed at this stage.</p>
+          <div class="direct">
+            <p style="color:rgba(251,250,246,.72)">Prefer to talk?</p>
+            <p style="margin-top:6px"><a href="https://wa.me/9720584278128" target="_blank" rel="noopener">WhatsApp 058-427-8128</a></p>
+            <p style="margin-top:4px"><a href="mailto:mikeymocton@gmail.com">mikeymocton@gmail.com</a></p>
+          </div>
+        </div>
+
+        <form name="enquiry" method="POST" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="enquiry">
+          <p style="display:none"><label>Leave this empty <input name="company"></label></p>
+          <div class="fields">
+            <div><label for="name">Your name</label><input id="name" name="name" required></div>
+            <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+            <div><label for="phone">Phone or WhatsApp</label><input id="phone" name="phone"></div>
+            <div>
+              <label for="occasion">What's the trip for</label>
+              <select id="occasion" name="occasion">
+                <option>Family trip</option>
+                <option>Yom Tov</option>
+                <option>Bar mitzvah or simcha</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div><label for="dates">Rough dates</label><input id="dates" name="dates" placeholder="e.g. Sukkos 2027"></div>
+            <div><label for="people">How many people</label><input id="people" name="people" placeholder="e.g. 9, four of them children"></div>
+            <div class="field-full">
+              <label for="notes">What do you need help with</label>
+              <textarea id="notes" name="notes" placeholder="Somewhere to stay, meals, a driver, a guide for the kids — whatever's on your mind."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-brass" type="submit">Send enquiry</button>
+            <span class="privacy">We'll only use this to reply to you.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="mark" href="#top" style="text-decoration:none">Shoresh<span style="color:var(--brass)">.</span></a>
+        <p style="margin-top:10px;max-width:26em">Family trips, Yom Tov and simchas in Israel, arranged and looked after by someone on the ground.</p>
+      </div>
+      <div class="foot-links">
+        <a href="#services">What we handle</a>
+        <a href="#how">How it works</a>
+        <a href="#occasions">Occasions</a>
+        <a href="https://wa.me/9720584278128" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:mikeymocton@gmail.com">Email</a>
+      </div>
+    </div>
+    <p class="copyright">© <span id="yr"></span> Shoresh Israel. Based in Beit Shemesh, Israel.</p>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
